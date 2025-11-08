@@ -4,6 +4,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
+
+
+  <div class="conteudo animate__animated animate__fadeInLeft"> 
+    <ion-card (click)="doarAlimentos()">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="assets/IconDoarAlimentos.png" />
+        </ion-thumbnail>
+        <ion-label>Alimentos</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  
+  <div class="conteudo animate__animated animate__fadeInLeft"> 
+    <ion-card (click)="doarRoupas()">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="assets/IconDoarRoupas.png" />
+        </ion-thumbnail>
+        <ion-label>Roupas</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <div class="conteudo animate__animated animate__fadeInLeft"> 
+    <ion-card (click)="doarSangue()">
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="assets/IconDoarSangue.png" />
+        </ion-thumbnail>
+        <ion-label>Sangue</ion-label>
+      </ion-item>
+    </ion-card>
+  </div>
 
 </ion-content>

@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <div class="conteudo">
+  <div class="conteudo animate__animated animate__fadeInLeft">
     <ion-img
       class="img-item"
       src="assets/doacao-vetor.png"
@@ -14,7 +14,26 @@
     ></ion-img>
 
     <p class="texto">
-      Existem pessoas precisando muito da sua ajuda!Veja abaixo como ajudar 😁
+      Existem pessoas precisando muito da sua ajuda! Veja abaixo como ajudar 😁
     </p>
+    <ion-card [routerLink]="['/tabs/tab2']">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/IconQueroDoar.png"
+          />
+        </ion-thumbnail>
+        <ion-label>Quero Doar</ion-label>
+      </ion-item>
+    </ion-card>
+
+    <ion-card [routerLink]="['/tabs/tab3']">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/IconPrecisoDeDoacoes.png"
+          />
+        </ion-thumbnail>
+        <ion-label>Preciso de doações</ion-label>
+      </ion-item>
+    </ion-card>
   </div>
 </ion-content>
