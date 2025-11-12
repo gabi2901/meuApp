@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title class="titulo">Receber Doações </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <div class="conteudo animate_animated animate_fadeInLeft">
+    <img src="./assets/receber.png" alt="imagem solidaria" />
 
-<ion-content>
- 
+    <p class="texto-item">
+      Está precisando de ajuda? Podemos te ajudar! Preencha os campos e fale
+      com um voluntário.
+    </p>
+
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+      <ion-item>
+        <ion-label position="floating">Nome Completo</ion-label>
+        <ion-input type="text" formControlName="nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input type="text" formControlName="endereco"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        type="submit"
+        color="success"
+        [disabled]="form.invalid"
+      >
+        💾 Salvar
+      </ion-button>
+    </form>
+  </div>
 </ion-content>
