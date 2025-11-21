@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ItensService } from '../services/itens';
 
 @Component({
   selector: 'app-tab3',
@@ -10,7 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class Tab3Page implements OnInit {
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private itensService: ItensService
+  ) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -26,10 +30,22 @@ export class Tab3Page implements OnInit {
   enviar() {
     let nome = this.form.get('nome')?.value;
     let endereco = this.form.get('endereco')?.value;
-    console.log(nome, endereco);
 
-    this.abrirUrl(
-      `https://api.whatsapp.com/send?phone=5587981217492&text=Olá,%20me%20chamo%20${nome},%20moro%20em%20${endereco}%20e%20vim%20através%20do%20seu%20app.%20Gostaria%20de%20receber%20doações!`
-    );
+
+    const itens = this.itensService.getItens();
+
+    
+    const listaItens = itens.length
+      ? itens.map(i => `• ${i}`).join('%0A')
+      : '';
+
+  
+    const mensagem =
+      `Olá, me chamo ${nome}, moro em ${endereco} e vim através do seu app.%0A%0A` +
+      `Itens que preciso:%0A${listaItens}`;
+
+    const url = `https://api.whatsapp.com/send?phone=5587981217492&text=${mensagem}`;
+
+    this.abrirUrl(url);
   }
 }

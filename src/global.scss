@@ -82,3 +82,17 @@ ion-thumbnail{
     }
 
 }
+.bt-list{
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  margin-top: 20px;     
+  margin-bottom: 40px;
+}
+
+.btn-list-tamanho {
+  --padding-top: 14px;       
+  --padding-bottom: 14px;    
+  --padding-start: 22px;     
+  --padding-end: 22px;
+}
