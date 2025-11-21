@@ -1,0 +1,38 @@
+<ion-content>
+
+  <h2 class="titulo">Alimentos</h2>
+
+  <ion-list>
+    <ion-item *ngFor="let item of alimentos">
+      <ion-checkbox slot="start" (ionChange)="alterarItem(item, $event.detail.checked)"></ion-checkbox>
+      <ion-label>{{ item }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <h2 class="titulo">Produtos de Higiene</h2>
+
+  <ion-list>
+    <ion-item *ngFor="let item of higiene">
+      <ion-checkbox slot="start" (ionChange)="alterarItem(item, $event.detail.checked)"></ion-checkbox>
+      <ion-label>{{ item }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+<div class="bt-list">
+  <ion-button
+    class="btn-list-tamanho"
+    size="small"
+    color="success"
+    routerLink="/tabs/tab3"
+  >
+    💾 SALVAR
+  </ion-button>
+</div>
+
+
+
+
+
+
+
+

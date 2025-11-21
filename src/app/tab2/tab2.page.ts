@@ -17,12 +17,20 @@ export class Tab2Page {
   
   doarRoupas() {
     this.abrirUrl (
-    'https://www.google.com/maps/search/?api=1&query=Ponto+Doacao+De+Roupas');
+    'https://www.google.com/maps/search/?api=1&query=Ponto+Doacao+De+Roupa');
   }
 
   doarSangue() {
     this.abrirUrl ( 
     'https://www.google.com/maps/search/?api=1&query=Ponto+Doacao+De+Sangue');
+  }
+  doarProdutosHigiene() {
+    this.abrirUrl ( 
+    'https://www.google.com/maps/search/?api=1&query=Ponto+Doacao');
+  }
+  doarBrinquedos() {
+    this.abrirUrl ( 
+    'https://www.google.com/maps/search/?api=1&query=Ponto+Doacao');
   }
 
   abrirUrl(url: string) {
